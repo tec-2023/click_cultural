@@ -14,14 +14,14 @@
     <div class="container">
       <h1>CLICK CULTURAL</h1>
       <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-     <nav id="nav-menu" class="nav-closed">
-  <a href="click_cultural.html">Inicio</a>
-  <a href="galerias.html">Galerías</a>
-  <a href="literatura.html">Literatura</a>
-  <a href="compromiso.html">Compromiso</a>
-  <a href="colaboradores.html">Colaboradores</a>
-  <a href="contacto.html">Contacto</a>
-</nav>
+      <nav id="nav-menu" class="nav-closed">
+        <a href="click_cultural.html">Inicio</a>
+        <a href="galerias.html">Galerías</a>
+        <a href="literatura.html">Literatura</a>
+        <a href="compromiso.html">Compromiso</a>
+        <a href="colaboradores.html">Colaboradores</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
   </header>
 <!-- Carrusel Futurista Eco-Friendly -->
@@ -67,6 +67,20 @@
   </div>
 </div>
   </main>
+<!-- Modal Login Administrador -->
+<div id="modal-login-admin" class="modal" style="display:none;">
+  <div class="modal-content" style="max-width:350px;">
+    <span class="close-modal" id="close-login-modal">&times;</span>
+    <h3>Iniciar sesión</h3>
+    <form>
+      <label for="admin-user">Usuario</label>
+      <input type="text" id="admin-user" name="admin-user" required>
+      <label for="admin-pass">Contraseña</label>
+      <input type="password" id="admin-pass" name="admin-pass" required>
+      <button type="submit" class="btn-cta">Entrar</button>
+    </form>
+  </div>
+</div>
 <script>
 document.getElementById('open-modal').onclick = function() {
   document.getElementById('modal-vision-mision').style.display = 'flex';
@@ -128,7 +142,14 @@ setInterval(moveCarousel, 3500);
 </script>
 
   <footer>
-    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados
+    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados 
+    <button id="admin-btn" class="admin-btn" title="Administrar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="#00ffb0" stroke-width="2"/>
+        <path d="M4 20c0-4 16-4 16 0" stroke="#00ffb0" stroke-width="2"/>
+      </svg>
+      Administrar
+    </button>
   </footer>
 
   <script>
@@ -139,6 +160,21 @@ setInterval(moveCarousel, 3500);
       navMenu.classList.toggle('nav-closed');
     });
   }
+</script>
+<script>
+document.getElementById('admin-btn').onclick = function() {
+  document.getElementById('modal-login-admin').style.display = 'flex';
+};
+document.getElementById('close-login-modal').onclick = function() {
+  document.getElementById('modal-login-admin').style.display = 'none';
+};
+// Cierra el modal si se hace clic fuera del contenido
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('modal-login-admin');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
 </script>
 </body>
 </html>

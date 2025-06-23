@@ -124,6 +124,24 @@ footer {
   letter-spacing: 1px;
   border-radius: 0 0 18px 18px;
   box-shadow: 0 -2px 16px #00ffb080;
+  position: relative;
+}
+
+footer .admin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 20px;
+  color: #00ffb0;
+  font-size: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  vertical-align: middle;
+}
+footer .admin-btn svg {
+  vertical-align: middle;
 }
 
 /* Responsive menú hamburguesa */
@@ -157,76 +175,43 @@ footer {
     padding: 24px 8px;
   }
 }
+.admin-btn {
+  background: none;
+  border: none;
+  color: #00ffb0; /* Cambia el color del texto a verde neón */
+  font: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.admin-btn svg {
+  vertical-align: middle;
+  /* Asegura que el SVG herede el color si usas currentColor */
+  /* fill: none; */
+}
 .modal {
   position: fixed;
   z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  overflow: auto;
-  background: linear-gradient(120deg, #0f2027cc 0%, #2ecc4088 100%);
-  display: flex; align-items: center; justify-content: center;
-  animation: modal-fade-in 0.4s;
-  backdrop-filter: blur(2px);
+  left: 0; top: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.4);
 }
-
-@keyframes modal-fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .modal-content {
-  background: linear-gradient(135deg, #1b3c2e 80%, #2ecc40cc 100%);
-  padding: 2.2em 2em 2em 2em;
-  border-radius: 18px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
   position: relative;
-  max-width: 420px;
-  width: 92%;
-  box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc40cc;
-  border: 2px solid #00ffb0;
-  color: #e0f7fa;
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  animation: modal-content-pop 0.5s;
 }
-
-@keyframes modal-content-pop {
-  0% { transform: scale(0.85); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.modal-content h3 {
-  font-family: 'Orbitron', Arial, sans-serif;
-  color: #00ffb0;
-  margin-bottom: 0.5em;
-  text-shadow: 0 0 8px #2ecc40cc, 0 0 16px #00ffb080;
-  letter-spacing: 2px;
-}
-
-.modal-content p {
-  color: #e0f7fa;
-  font-size: 1.08em;
-  margin-bottom: 1.2em;
-  text-shadow: 0 0 6px #2ecc4080;
-}
-
 .close-modal {
   position: absolute;
-  top: 12px; right: 18px;
-  font-size: 1.7em;
-  color: #00ffb0;
+  top: 8px; right: 12px;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.2s, text-shadow 0.2s;
-  text-shadow: 0 0 12px #00ffb0, 0 0 24px #2ecc4080;
-  font-family: 'Orbitron', Arial, sans-serif;
-  background: none;
-  border: none;
-  outline: none;
-}
-
-.close-modal:hover {
-  color: #2ecc40;
-  text-shadow: 0 0 24px #2ecc40, 0 0 32px #00ffb080;
-  transform: scale(1.15);
 }
 .carousel {
   width: auto;
