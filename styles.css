@@ -202,17 +202,81 @@ footer .admin-btn svg {
   background: rgba(0,0,0,0.4);
 }
 .modal-content {
-  background: #fff;
-  padding: 2rem 1.5rem;
-  border-radius: 8px;
+  background: rgba(20, 40, 30, 0.97);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 14px;
   position: relative;
+  box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc4080;
+  border: 2px solid #00ffb0;
+  max-width: 350px;
+  width: 100%;
+  color: #e0f7fa;
+  font-family: 'Roboto', Arial, sans-serif;
 }
+
 .close-modal {
   position: absolute;
   top: 8px; right: 12px;
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+#modal-login-admin h3 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #00ffb0;
+  text-align: center;
+  margin-bottom: 18px;
+  text-shadow: 0 0 10px #00ffb080;
+}
+
+#modal-login-admin label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #00ffb0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#modal-login-admin input[type="text"],
+#modal-login-admin input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #00ffb0;
+  border-radius: 8px;
+  background: rgba(10, 30, 20, 0.85);
+  color: #e0f7fa;
+  font-size: 1em;
+  margin-bottom: 14px;
+  outline: none;
+  transition: border 0.2s;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+#modal-login-admin input[type="text"]:focus,
+#modal-login-admin input[type="password"]:focus {
+  border: 1.5px solid #2ecc40;
+  background: rgba(10, 30, 20, 0.98);
+}
+
+#modal-login-admin .btn-cta {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#modal-login-admin .close-modal {
+  color: #00ffb0;
+  font-size: 2rem;
+  top: 10px;
+  right: 18px;
+  transition: color 0.2s;
+}
+
+#modal-login-admin .close-modal:hover {
+  color: #2ecc40;
+}
+
 .carousel {
   width: auto;
   min-width: auto;
