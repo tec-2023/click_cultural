@@ -1,0 +1,158 @@
+/* Estilo Futurista y Eco-Friendly para CLICK CULTURAL */
+
+body {
+  background: linear-gradient(135deg, #0f2027 0%, #2ecc40 100%);
+  color: #e0f7fa;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(10, 30, 20, 0.95);
+  color: #fff;
+  padding: 28px 0 12px 0;
+  box-shadow: 0 4px 32px #00ffb0a0;
+  border-bottom: 2px solid #00ffb0;
+}
+
+header h1 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 2.7em;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0;
+  color: #00ffb0;
+  text-shadow: 0 0 12px #00ffb0, 0 0 24px #00ffb080;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #00ffb0;
+  font-size: 2em;
+  position: absolute;
+  top: 38px;
+  right: 32px;
+  cursor: pointer;
+}
+
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #00ffb0;
+  text-decoration: none;
+  margin: 0 22px;
+  font-weight: 600;
+  font-size: 1.18em;
+  letter-spacing: 1px;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 0 0 8px #00ffb080;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 16px #00ffb0, 0 0 32px #00ffb080;
+  border-bottom: 2px solid #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(20, 40, 30, 0.93);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #00ffb080;
+  padding: 38px 30px;
+  border: 1.5px solid #00ffb0;
+}
+
+.section h2 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #00ffb0;
+  text-align: center;
+  margin-top: 0;
+  text-shadow: 0 0 10px #00ffb080;
+}
+
+.slogan {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #2ecc40;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 24px 0 18px 0;
+  text-shadow: 0 0 8px #2ecc4080;
+}
+
+.btn-cta {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #00ffb0 0%, #2ecc40 100%);
+  color: #222;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 10px;
+  font-size: 1.18em;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 18px #00ffb080;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-cta:hover {
+  background: linear-gradient(90deg, #2ecc40 0%, #00ffb0 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #00ffb080;
+}
+
+footer {
+  background: rgba(10, 30, 20, 0.95);
+  color: #00ffb0;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 -2px 16px #00ffb080;
+}
+
+/* Responsive menú hamburguesa */
+@media (max-width: 700px) {
+  #menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(10, 30, 20, 0.98);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 2px solid #00ffb0;
+    box-shadow: 0 8px 32px #00ffb080;
+  }
+  nav.nav-closed {
+    display: none;
+  }
+  nav:not(.nav-closed) {
+    display: flex;
+  }
+  nav a {
+    margin: 18px 0;
+    font-size: 1.2em;
+  }
+  .container {
+    padding: 24px 8px;
+  }
+}

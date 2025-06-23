@@ -1,0 +1,311 @@
+/* contacto.css - Estilo futurista y eco-friendly para contacto.html */
+
+body {
+  background: linear-gradient(135deg, #0f2027 0%, #2ecc40 100%);
+  color: #e0f7fa;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(10, 30, 20, 0.95);
+  color: #fff;
+  padding: 28px 0 12px 0;
+  box-shadow: 0 4px 32px #00ffb0a0;
+  border-bottom: 2px solid #00ffb0;
+}
+
+header h1 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 2.3em;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0;
+  color: #00ffb0;
+  text-shadow: 0 0 12px #00ffb0, 0 0 24px #00ffb080;
+}
+
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #00ffb0;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 0 0 8px #00ffb080;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 16px #00ffb0, 0 0 32px #00ffb080;
+  border-bottom: 2px solid #fff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(20, 40, 30, 0.93);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #00ffb080;
+  padding: 36px 28px;
+  border: 1.5px solid #00ffb0;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2, h3 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #00ffb0;
+  text-align: center;
+  margin-top: 0;
+  text-shadow: 0 0 16px #00ffb0, 0 0 32px #2ecc40a0;
+  letter-spacing: 2px;
+}
+
+.info-contacto {
+  background: rgba(44, 204, 64, 0.10);
+  border-left: 4px solid #00ffb0;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #00ffb040;
+  padding: 18px 24px;
+  margin-bottom: 28px;
+  animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+hr {
+  border: none;
+  border-top: 1.5px solid #00ffb0;
+  margin: 32px 0 24px 0;
+}
+
+/* Mapa con efecto hover */
+iframe {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #00ffb080;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+iframe:hover {
+  box-shadow: 0 0 32px #00ffb0, 0 0 24px #2ecc40;
+  transform: scale(1.01);
+}
+
+/* Centrar el formulario y limitar su ancho */
+.form-contacto {
+  background: rgba(20, 40, 30, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #00ffb080;
+  padding: 24px 18px;
+  border: 1.5px solid #00ffb0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px auto 0 auto;   /* Centrado vertical y horizontal */
+  max-width: 400px;           /* Limita el ancho para que no sea muy grande */
+  align-items: center;        /* Centra los elementos hijos horizontalmente */
+}
+
+.form-contacto label {
+  align-self: flex-start;     /* Alinea las etiquetas a la izquierda */
+  margin-left: 8px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;                /* Ocupa todo el ancho disponible */
+  box-sizing: border-box;
+}
+
+.form-contacto button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 16px #00ffb0a0;
+}
+
+.form-contacto input[type="text"] {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="%2300ffb0"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 20px 20px;
+}
+.form-contacto input[type="email"] {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="18" height="10" rx="2" stroke="%2300ffb0"/><path d="M3 7l9 6 9-6" stroke="%2300ffb0"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 20px 20px;
+}
+.form-contacto textarea {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="18" height="10" rx="2" stroke="%2300ffb0"/><path d="M3 7l9 6 9-6" stroke="%2300ffb0"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 8px 12px;
+  background-size: 20px 20px;
+}
+
+/* Botón con animación */
+.form-contacto button {
+  background: linear-gradient(90deg, #00ffb0 0%, #2ecc40 100%);
+  color: #222;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1.15em;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 16px #00ffb080;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.form-contacto button::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #00ffb0 40%, #2ecc40 60%, transparent);
+  opacity: 0.2;
+  transform: skewX(-20deg);
+  transition: left 0.4s;
+  z-index: -1;
+}
+.form-contacto button:hover {
+  background: linear-gradient(90deg, #2ecc40 0%, #00ffb0 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #00ffb080;
+}
+.form-contacto button:hover::after {
+  left: 100%;
+}
+
+/* Footer con efecto de luz */
+footer {
+  background: rgba(10, 30, 20, 0.95);
+  color: #00ffb0;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 -2px 16px #00ffb080;
+  text-shadow: 0 0 8px #00ffb0;
+}
+
+/* Responsive para móviles */
+@media (max-width: 700px) {
+  .container {
+    padding: 18px 4px;
+    box-shadow: 0 4px 16px #00ffb080;
+  }
+  iframe {
+    height: 220px;
+  }
+  .form-contacto {
+    padding: 12px 4px;
+  }
+  .info-contacto {
+    padding: 10px 6px;
+  }
+}
+form-contacto {
+  background: rgba(20, 40, 30, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #00ffb080;
+  padding: 28px 22px;
+  border: 1.5px solid #00ffb0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 36px auto 0 auto;   /* Centrado horizontal */
+  max-width: 400px;           /* Limita el ancho */
+  align-items: stretch;        /* Los campos ocupan todo el ancho */
+}
+
+.form-contacto label {
+  color: #00ffb0;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(20, 30, 40, 0.92);
+  border: 1.5px solid #00ffb0;
+  color: #e0f7fa;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.08em;
+  margin-bottom: 6px;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 8px #00ffb720;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border: 1.5px solid #2ecc40;
+  box-shadow: 0 0 16px #00ffb0a0;
+}
+
+.form-contacto button {
+  background: linear-gradient(90deg, #00ffb0 0%, #2ecc40 100%);
+  color: #222;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1.15em;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 16px #00ffb080;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.form-contacto button:hover {
+  background: linear-gradient(90deg, #2ecc40 0%, #00ffb0 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #00ffb080;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CLICK CULTURAL - Donde la cultura y la técnica se encuentran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CLICK CULTURAL</h1>
+      <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+     <nav id="nav-menu" class="nav-closed">
+  <a href="click_cultural.html">Inicio</a>
+  <a href="galerias.html">Galerías</a>
+  <a href="literatura.html">Literatura</a>
+  <a href="compromiso.html">Compromiso</a>
+  <a href="colaboradores.html">Colaboradores</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+    </div>
+  </header>
+
+  <main id="inicio" class="section">
+    <div class="container">
+      <h2>Bienvenido a CLICK CULTURAL</h2>
+      <p>
+        Un espacio donde la cultura y la técnica se encuentran para crear experiencias innovadoras que respetan y valoran nuestro medio ambiente. Utilizamos tecnología de vanguardia para acercarte al patrimonio cultural con un enfoque sostenible y futurista.
+      </p>
+      <div class="slogan">Donde la cultura y la técnica se encuentran.</div>
+      <button class="btn-cta" onclick="alert('¡Gracias por tu interés en CLICK CULTURAL!')">Descubre más</button>
+    </div>
+  </main>
+
+  <main id="proyecto" class="section">
+    <div class="container">
+      <h2>Sobre el Proyecto</h2>
+      <p>
+        CLICK CULTURAL es una plataforma innovadora que integra tecnología avanzada para preservar y difundir la riqueza cultural, promoviendo prácticas amigables con el medio ambiente. Nuestro enfoque combina la creatividad con soluciones tecnológicas que minimizan el impacto ambiental y potencian la participación de la comunidad.
+      </p>
+    </div>
+  </main>
+  
+
+  
+
+  <footer>
+    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados
+  </footer>
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-closed');
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerías de Arte Estudiantil - CLICK CULTURAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="galerias.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CLICK CULTURAL</h1>
+      <nav>
+       <a href="click_cultural.html">Inicio</a>
+  <a href="galerias.html">Galerías</a>
+  <a href="literatura.html">Literatura</a>
+  <a href="compromiso.html">Compromiso</a>
+  <a href="colaboradores.html">Colaboradores</a>
+  <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h2>Galerías de Arte Estudiantil</h2>
+      <p>
+        Descubre algunas de las obras creadas por los estudiantes en los diferentes cursos del Centro Cultural y Politécnico José Coronel Urtecho.
+      </p>
+      <div class="gallery">
+        <img src="galeria1.jpg" alt="Obra de estudiante 1" />
+        <img src="galeria2.jpg" alt="Obra de estudiante 2" />
+        <img src="galeria3.jpg" alt="Obra de estudiante 3" />
+        <!-- Agrega más imágenes según sea necesario -->
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados
+  </footer>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-closed');
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compromiso Ambiental - CLICK CULTURAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="compromiso.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CLICK CULTURAL</h1>
+      <nav>
+          <a href="click_cultural.html">Inicio</a>
+  <a href="galerias.html">Galerías</a>
+  <a href="literatura.html">Literatura</a>
+  <a href="compromiso.html">Compromiso</a>
+  <a href="colaboradores.html">Colaboradores</a>
+  <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h2>Compromiso Ambiental de los Estudiantes de Diseño Gráfico</h2>
+      <p>
+        Como estudiantes de diseño gráfico, reconocemos la importancia de proteger y preservar nuestro medio ambiente. Nuestro compromiso va más allá de crear piezas visuales atractivas; buscamos integrar prácticas sostenibles en cada proyecto y promover la conciencia ecológica en nuestra comunidad.
+      </p>
+      <h3>¿Cómo podemos salvar el medio ambiente desde el diseño gráfico?</h3>
+      <ul>
+        <li><strong>Uso responsable de materiales:</strong> Preferimos papeles reciclados y tintas ecológicas en impresiones.</li>
+        <li><strong>Diseño digital:</strong> Fomentamos el uso de medios digitales para reducir el consumo de papel y recursos físicos.</li>
+        <li><strong>Educación visual:</strong> Creamos campañas gráficas que sensibilizan sobre el cuidado del agua, la flora y la fauna.</li>
+        <li><strong>Reutilización y reciclaje:</strong> Promovemos la reutilización de materiales y la correcta gestión de residuos en nuestros talleres.</li>
+        <li><strong>Colaboración:</strong> Trabajamos en equipo para desarrollar soluciones creativas que ayuden a resolver problemas ambientales locales.</li>
+      </ul>
+      <h3>Nuestro compromiso</h3>
+      <p>
+        Estamos comprometidos a ser agentes de cambio, utilizando el diseño gráfico como una herramienta poderosa para inspirar y educar sobre la importancia de cuidar nuestros recursos naturales. Cada proyecto es una oportunidad para demostrar que el arte y la creatividad pueden ir de la mano con la sostenibilidad.
+      </p>
+      <div class="slogan">¡Juntos, diseñamos un futuro más verde!</div>
+
+      <!-- Sección de imágenes -->
+      <h3 style="margin-top:40px;">Galería Ambiental</h3>
+      <div class="gallery">
+        <img src="img/reciclaje.jpg" alt="Reciclaje creativo" />
+        <img src="img/plantas.jpg" alt="Diseño con naturaleza" />
+        <img src="img/conciencia.jpg" alt="Conciencia ecológica" />
+      </div>
+
+      <!-- Sección de videos -->
+      <h3 style="margin-top:40px;">Videos Inspiradores</h3>
+      <div class="videos-list">
+        <div class="video-item">
+          <h4>Campaña: Recicla y Crea</h4>
+          <video width="320" controls>
+            <source src="videos/recicla_crea.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+        </div>
+        <div class="video-item">
+          <h4>Mensaje de los estudiantes</h4>
+          <video width="320" controls>
+            <source src="videos/estudiantes_compromiso.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados
+  </footer>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-closed');
+    });
+  }
+</script>
+</body>
+</html>

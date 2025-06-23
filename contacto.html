@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - CLICK CULTURAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CLICK CULTURAL</h1>
+      <nav>
+    <a href="click_cultural.html">Inicio</a>
+  <a href="galerias.html">Galerías</a>
+  <a href="literatura.html">Literatura</a>
+  <a href="compromiso.html">Compromiso</a>
+  <a href="colaboradores.html">Colaboradores</a>
+  <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h2>Contacto</h2>
+      <div class="info-contacto">
+        <p><strong>Centro Cultural y Politécnico José Coronel Urtecho</strong></p>
+        <p><strong>Dirección:</strong> Calle Principal #123, Managua, Nicaragua</p>
+        <p><strong>Teléfono:</strong> +505 2222 3333</p>
+        <p><strong>Email:</strong> info@centroculturaljcu.edu.ni</p>
+        <p><strong>Horario de atención:</strong> Lunes a Viernes, 8:00 am - 5:00 pm</p>
+      </div>
+      <!-- Mapa del centro -->
+      <div style="margin: 30px 0;">
+        <iframe 
+          src="https://www.google.com/maps?q=Centro+Cultural+y+Politécnico+José+Coronel+Urtecho,Managua,Nicaragua&output=embed"
+          width="100%" height="320" style="border:0; border-radius:12px; box-shadow:0 2px 16px #00ffb080;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <hr>
+      <h3>Envíanos un mensaje</h3>
+      <form class="form-contacto" action="enviar_contacto.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados
+  </footer>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-closed');
+    });
+  }
+</script>
+</body>
+</html>
