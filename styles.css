@@ -311,3 +311,105 @@ footer .admin-btn svg {
     height: auto;
   }
 }
+
+/* Formulario general con diseño futurista y eco-friendly */
+.form-contacto {
+  background: rgba(20, 40, 30, 0.97);
+  border-radius: 14px;
+  box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc4080;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border: 2px solid #00ffb0;
+  max-width: 400px;
+  margin: 36px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+  color: #e0f7fa;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.form-contacto label {
+  color: #00ffb0;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00ffb080;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(20, 30, 40, 0.92);
+  border: 1.5px solid #00ffb0;
+  color: #e0f7fa;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 1.08em;
+  margin-bottom: 6px;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-shadow: 0 0 8px #00ffb720;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border: 2px solid #2ecc40;
+  background: rgba(10, 30, 20, 0.98);
+  box-shadow: 0 0 16px #00ffb0a0, 0 0 24px #2ecc4080;
+  color: #fff;
+}
+
+.form-contacto textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-contacto button {
+  background: linear-gradient(90deg, #00ffb0 0%, #2ecc40 100%);
+  color: #222;
+  border: none;
+  padding: 14px 0;
+  border-radius: 10px;
+  font-size: 1.15em;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 18px #00ffb080;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.form-contacto button::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #00ffb0 40%, #2ecc40 60%, transparent);
+  opacity: 0.18;
+  transform: skewX(-20deg);
+  transition: left 0.4s;
+  z-index: -1;
+}
+
+.form-contacto button:hover {
+  background: linear-gradient(90deg, #2ecc40 0%, #00ffb0 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #00ffb080;
+}
+
+.form-contacto button:hover::after {
+  left: 100%;
+}

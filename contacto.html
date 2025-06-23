@@ -40,21 +40,26 @@
       </div>
       <hr>
       <h3>Envíanos un mensaje</h3>
-      <form class="form-contacto" action="enviar_contacto.php" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="asunto">Asunto:</label>
-        <input type="text" id="asunto" name="asunto" required>
-        
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="contacto-flex">
+        <form class="form-contacto" action="enviar_contacto.php" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="asunto">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" required>
+          
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          
+          <button type="submit">Enviar</button>
+        </form>
+        <div class="contacto-img">
+          <img src="img/contacto-ilustracion.png" alt="Ilustración contacto" />
+        </div>
+      </div>
     </div>
   </main>
   <footer>
