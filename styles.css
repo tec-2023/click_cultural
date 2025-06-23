@@ -12,9 +12,10 @@ body {
 header {
   background: rgba(10, 30, 20, 0.95);
   color: #fff;
-  padding: 28px 0 12px 0;
-  box-shadow: 0 4px 32px #00ffb0a0;
-  border-bottom: 2px solid #00ffb0;
+  padding: 40px 20px;
+  box-shadow: 0 80px 350px #00ffb0a0;
+  border-bottom: px solid #00ffb0;
+  
 }
 
 header h1 {
@@ -154,5 +155,110 @@ footer {
   }
   .container {
     padding: 24px 8px;
+  }
+}
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background: linear-gradient(120deg, #0f2027cc 0%, #2ecc4088 100%);
+  display: flex; align-items: center; justify-content: center;
+  animation: modal-fade-in 0.4s;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1b3c2e 80%, #2ecc40cc 100%);
+  padding: 2.2em 2em 2em 2em;
+  border-radius: 18px;
+  position: relative;
+  max-width: 420px;
+  width: 92%;
+  box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc40cc;
+  border: 2px solid #00ffb0;
+  color: #e0f7fa;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center;
+  animation: modal-content-pop 0.5s;
+}
+
+@keyframes modal-content-pop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #00ffb0;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 8px #2ecc40cc, 0 0 16px #00ffb080;
+  letter-spacing: 2px;
+}
+
+.modal-content p {
+  color: #e0f7fa;
+  font-size: 1.08em;
+  margin-bottom: 1.2em;
+  text-shadow: 0 0 6px #2ecc4080;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 1.7em;
+  color: #00ffb0;
+  cursor: pointer;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 0 0 12px #00ffb0, 0 0 24px #2ecc4080;
+  font-family: 'Orbitron', Arial, sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.close-modal:hover {
+  color: #2ecc40;
+  text-shadow: 0 0 24px #2ecc40, 0 0 32px #00ffb080;
+  transform: scale(1.15);
+}
+.carousel {
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 0 32px #00ffae88, 0 0 8px #2ecc4080;
+  border: none;
+  background: linear-gradient(135deg, #1b3c2e91 80%, #2ecc4085 100%);
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.10s cubic-bezier(.88,0,.18,1);
+  will-change: transform;
+}
+
+.carousel img {
+  width: auto;
+  height: 250px;         /* <-- Se ajusta automáticamente a la imagen */
+  object-fit: contain;  /* <-- No recorta la imagen, la muestra completa */
+  display: block;
+  margin: 0;
+  background: #11111100;     /* Opcional: fondo oscuro si la imagen no es tan ancha */
+}
+
+@media (max-width: 700px) {
+  .carousel img {
+    width: 100vw;
+    height: auto;
   }
 }
