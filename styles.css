@@ -15,7 +15,6 @@ header {
   padding: 40px 20px;
   box-shadow: 0 80px 350px #00ffb0a0;
   border-bottom: px solid #00ffb0;
-  
 }
 
 header h1 {
@@ -82,15 +81,6 @@ nav a:hover {
   text-shadow: 0 0 10px #00ffb080;
 }
 
-.slogan {
-  font-family: 'Orbitron', Arial, sans-serif;
-  color: #2ecc40;
-  font-size: 1.3em;
-  text-align: center;
-  margin: 24px 0 18px 0;
-  text-shadow: 0 0 8px #2ecc4080;
-}
-
 .btn-cta {
   display: block;
   margin: 0 auto;
@@ -140,9 +130,70 @@ footer .admin-btn {
   font-weight: 500;
   vertical-align: middle;
 }
-footer .admin-btn svg {
-  vertical-align: middle;
+
+.form-contacto {
+  background: rgba(20, 40, 30, 0.97);
+  border-radius: 14px;
+  box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc4080;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border: 2px solid #00ffb0;
+  max-width: 600px;
+  margin: 36px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+  color: #e0f7fa;
+  font-family: 'Roboto', Arial, sans-serif;
 }
+
+.form-contacto label {
+  color: #00ffb0;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00ffb080;
+}
+
+.form-contacto input[type="file"] {
+  background: rgba(20, 30, 40, 0.92);
+  border: 1.5px solid #00ffb0;
+  color: #e0f7fa;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1em;
+  outline: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-shadow: 0 0 8px #00ffb720;
+}
+
+.form-contacto button {
+  background: linear-gradient(90deg, #00ffb0 0%, #2ecc40 100%);
+  color: #222;
+  border: none;
+  padding: 14px 0;
+  border-radius: 10px;
+  font-size: 1.15em;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 18px #00ffb080;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.form-contacto button:hover {
+  background: linear-gradient(90deg, #2ecc40 0%, #00ffb0 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #00ffb080;
+}
+
 
 /* Responsive menú hamburguesa */
 @media (max-width: 700px) {
