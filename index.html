@@ -1,181 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CLICK CULTURAL - Donde la cultura y la técnica se encuentran</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-
-
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>CLICK CULTURAL</h1>
-      <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-      <nav id="nav-menu" class="nav-closed">
-        <a href="click_cultural.html">Inicio</a>
-        <a href="galerias.html">Galerías</a>
-        <a href="literatura.html">Literatura</a>
-        <a href="compromiso.html">Compromiso</a>
-        <a href="colaboradores.html">Colaboradores</a>
-        <a href="blog-project/blog.html">Blog</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CLICK CULTURAL - Donde la cultura y la técnica se encuentran</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>CLICK CULTURAL</h1>
+        <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <nav id="nav-menu" class="nav-closed">
+          <a href="index.html">Inicio</a>
+          <a href="galerias.html">Galerías</a>
+          <a href="literatura.php">Literatura</a>
+          <a href="compromiso.html">Compromiso</a>
+          <a href="colaboradores.html">Colaboradores</a>
+          <a href="blog-project/blog.html">Blog</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Carrusel Futurista Eco-Friendly -->
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="img/carrusel1.jpg" alt="Cultura 1" />
+        <img src="img/carrusel2.jpg" alt="Cultura 2" />
+        <img src="img/carrusel3.jpg" alt="Cultura 3" />
+        <img src="img/carrusel4.jpg" alt="Cultura 4" />
+        <img src="img/carrusel5.jpg" alt="Cultura 5" />
+        <img src="img/carrusel6.jpg" alt="Cultura 6" />
+      </div>
     </div>
-  </header>
-<!-- Carrusel Futurista Eco-Friendly -->
-<div class="carousel">
-  <div class="carousel-track">
-    <img src="img/carrusel1.jpg" alt="Cultura 1">
-    <img src="img/carrusel2.jpg" alt="Cultura 2">
-    <img src="img/carrusel3.jpg" alt="Cultura 3">
-     <img src="img/carrusel4.jpg" alt="Cultura 4">
-    <img src="img/carrusel5.jpg" alt="Cultura 5">
-    <img src="img/carrusel6.jpg" alt="Cultura 6">
-  </div>
-</div>
-  <main id="inicio" class="section">
-    <div class="container">
-      <h2>Bienvenido a CLICK CULTURAL</h2>
-      <p>
-        Un espacio donde la cultura y la técnica se encuentran para crear experiencias innovadoras que respetan y valoran nuestro medio ambiente. Utilizamos tecnología de vanguardia para acercarte al patrimonio cultural con un enfoque sostenible y futurista.
-      </p>
-      <div class="slogan">Donde la cultura y la técnica se encuentran.</div>
-      <button class="btn-cta" id="open-modal">Descubre más</button>
+    <main id="inicio" class="section">
+      <div class="container">
+        <h2>Bienvenido a CLICK CULTURAL</h2>
+        <p>
+          Un espacio donde la cultura y la técnica se encuentran para crear
+          experiencias innovadoras que respetan y valoran nuestro medio
+          ambiente. Utilizamos tecnología de vanguardia para acercarte al
+          patrimonio cultural con un enfoque sostenible y futurista.
+        </p>
+        <div class="slogan">Donde la cultura y la técnica se encuentran.</div>
+        <button class="btn-cta" id="open-modal">Descubre más</button>
+      </div>
+      <!-- Modal -->
+      <div id="modal-vision-mision" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close-modal" id="close-modal">&times;</span>
+          <main id="proyecto" class="section">
+            <div class="container">
+              <h2>Sobre el Proyecto</h2>
+              <p>
+                CLICK CULTURAL es una plataforma innovadora que integra
+                tecnología avanzada para preservar y difundir la riqueza
+                cultural, promoviendo prácticas amigables con el medio ambiente.
+                Nuestro enfoque combina la creatividad con soluciones
+                tecnológicas que minimizan el impacto ambiental y potencian la
+                participación de la comunidad.
+              </p>
+            </div>
+          </main>
+          <h3>Visión</h3>
+          <p>
+            Ser la plataforma líder en la integración de tecnología y cultura,
+            promoviendo la sostenibilidad y el acceso universal al patrimonio
+            cultural.
+          </p>
+          <h3>Misión</h3>
+          <p>
+            Acercar la cultura a las personas mediante soluciones tecnológicas
+            innovadoras, fomentando la participación comunitaria y el respeto
+            por el medio ambiente.
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- Modal Login Administrador -->
+    <div id="modal-login-admin" class="modal" style="display: none">
+      <div class="modal-content" style="max-width: 350px">
+        <span class="close-modal" id="close-login-modal">&times;</span>
+        <h3>Iniciar sesión</h3>
+        <form id="admin-login-form" method="POST" action="login.php">
+          <label for="admin-user">Usuario</label>
+          <input type="text" id="admin-user" name="usuario" required />
+
+          <label for="admin-pass">Contraseña</label>
+          <input type="password" id="admin-pass" name="password" required />
+
+          <button type="submit" class="btn-cta">Entrar</button>
+        </form>
+      </div>
     </div>
-    <!-- Modal -->
-<div id="modal-vision-mision" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="close-modal" id="close-modal">&times;</span>
-    <main id="proyecto" class="section">
-    <div class="container">
-      <h2>Sobre el Proyecto</h2>
-      <p>
-        CLICK CULTURAL es una plataforma innovadora que integra tecnología avanzada para preservar y difundir la riqueza cultural, promoviendo prácticas amigables con el medio ambiente. Nuestro enfoque combina la creatividad con soluciones tecnológicas que minimizan el impacto ambiental y potencian la participación de la comunidad.
-      </p>
-    </div>
-  </main>
-    <h3>Visión</h3>
-    <p>
-      Ser la plataforma líder en la integración de tecnología y cultura, promoviendo la sostenibilidad y el acceso universal al patrimonio cultural.
-    </p>
-    <h3>Misión</h3>
-    <p>
-      Acercar la cultura a las personas mediante soluciones tecnológicas innovadoras, fomentando la participación comunitaria y el respeto por el medio ambiente.
-    </p>
-  </div>
-</div>
-  </main>
-<!-- Modal Login Administrador -->
-<div id="modal-login-admin" class="modal" style="display:none;">
-  <div class="modal-content" style="max-width:350px;">
-    <span class="close-modal" id="close-login-modal">&times;</span>
-    <h3>Iniciar sesión</h3>
-    <form>
-      <label for="admin-user">Usuario</label>
-      <input type="text" id="admin-user" name="admin-user" required>
-      <label for="admin-pass">Contraseña</label>
-      <input type="password" id="admin-pass" name="admin-pass" required>
-      <button type="submit" class="btn-cta">Entrar</button>
-    </form>
-  </div>
-</div>
-<script>
-document.getElementById('open-modal').onclick = function() {
-  document.getElementById('modal-vision-mision').style.display = 'flex';
-};
-document.getElementById('close-modal').onclick = function() {
-  document.getElementById('modal-vision-mision').style.display = 'none';
-};
-// Cierra el modal si se hace clic fuera del contenido
-window.onclick = function(event) {
-  const modal = document.getElementById('modal-vision-mision');
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-};
-</script>
-<script>
-// filepath: c:\Users\PC 1\click_cultural\click_cultural.html
-const track = document.querySelector('.carousel-track');
-let slides = Array.from(document.querySelectorAll('.carousel-track img'));
-const slideCount = slides.length;
+    <script>
+      document.getElementById("open-modal").onclick = function () {
+        document.getElementById("modal-vision-mision").style.display = "flex";
+      };
+      document.getElementById("close-modal").onclick = function () {
+        document.getElementById("modal-vision-mision").style.display = "none";
+      };
+      // Cierra el modal si se hace clic fuera del contenido
+      window.onclick = function (event) {
+        const modal = document.getElementById("modal-vision-mision");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      // filepath: c:\Users\PC 1\click_cultural\click_cultural.html
+      const track = document.querySelector(".carousel-track");
+      let slides = Array.from(document.querySelectorAll(".carousel-track img"));
+      const slideCount = slides.length;
 
-// Clona la primera y última imagen
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slideCount - 1].cloneNode(true);
-track.appendChild(firstClone);
-track.insertBefore(lastClone, slides[0]);
+      // Clona la primera y última imagen
+      const firstClone = slides[0].cloneNode(true);
+      const lastClone = slides[slideCount - 1].cloneNode(true);
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, slides[0]);
 
-// Vuelve a seleccionar los slides (ahora con clones)
-slides = Array.from(document.querySelectorAll('.carousel-track img'));
+      // Vuelve a seleccionar los slides (ahora con clones)
+      slides = Array.from(document.querySelectorAll(".carousel-track img"));
 
-// Ajusta el ancho del track para que quepan todos los slides (incluyendo clones)
-track.style.width = `${slides.length * 100}auto`;
+      // Ajusta el ancho del track para que quepan todos los slides (incluyendo clones)
+      track.style.width = `${slides.length * 100}auto`;
 
-let index = 1;
-track.style.transform = `translateX(-${index * 100}auto)`;
-
-// Función para mover el carrusel
-function moveCarousel() {
-  index++;
-  track.style.transition = 'transform 0.10s cubic-bezier(.88,0,.18,1)';
-  track.style.transform = `translateX(-${index * 100}auto)`;
-
-  setTimeout(() => {
-    if (index === slides.length - 1) {
-      track.style.transition = 'none';
-      index = 1;
+      let index = 1;
       track.style.transform = `translateX(-${index * 100}auto)`;
-    }
-    if (index === 0) {
-      track.style.transition = 'none';
-      index = slides.length - 2;
-      track.style.transform = `translateX(-${index * 100}vw)`;
-    }
-  }, 850);
-}
 
-// Inicia el bucle automático
-setInterval(moveCarousel, 3500);
-</script>
+      // Función para mover el carrusel
+      function moveCarousel() {
+        index++;
+        track.style.transition = "transform 0.10s cubic-bezier(.88,0,.18,1)";
+        track.style.transform = `translateX(-${index * 100}auto)`;
 
-  <footer>
-    &copy; 2025 CLICK CULTURAL | Todos los derechos reservados 
-    <button id="admin-btn" class="admin-btn" title="Administrar">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="8" r="4" stroke="#00ffb0" stroke-width="2"/>
-        <path d="M4 20c0-4 16-4 16 0" stroke="#00ffb0" stroke-width="2"/>
-      </svg>
-      Administrar
-    </button>
-  </footer>
+        setTimeout(() => {
+          if (index === slides.length - 1) {
+            track.style.transition = "none";
+            index = 1;
+            track.style.transform = `translateX(-${index * 100}auto)`;
+          }
+          if (index === 0) {
+            track.style.transition = "none";
+            index = slides.length - 2;
+            track.style.transform = `translateX(-${index * 100}vw)`;
+          }
+        }, 850);
+      }
 
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  if(menuToggle && navMenu){
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('nav-closed');
-    });
-  }
-</script>
-<script>
-document.getElementById('admin-btn').onclick = function() {
-  document.getElementById('modal-login-admin').style.display = 'flex';
-};
-document.getElementById('close-login-modal').onclick = function() {
-  document.getElementById('modal-login-admin').style.display = 'none';
-};
-// Cierra el modal si se hace clic fuera del contenido
-window.addEventListener('click', function(event) {
-  const modal = document.getElementById('modal-login-admin');
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-</script>
-</body>
+      // Inicia el bucle automático
+      setInterval(moveCarousel, 3500);
+    </script>
+
+    <footer>
+      &copy; 2025 CLICK CULTURAL | Todos los derechos reservados
+      <button id="admin-btn" class="admin-btn" title="Administrar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" stroke="#00ffb0" stroke-width="2" />
+          <path d="M4 20c0-4 16-4 16 0" stroke="#00ffb0" stroke-width="2" />
+        </svg>
+        Administrar
+      </button>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("nav-closed");
+        });
+      }
+    </script>
+    <script>
+      document.getElementById("admin-btn").onclick = function () {
+        document.getElementById("modal-login-admin").style.display = "flex";
+      };
+      document.getElementById("close-login-modal").onclick = function () {
+        document.getElementById("modal-login-admin").style.display = "none";
+      };
+      // Cierra el modal si se hace clic fuera del contenido
+      window.addEventListener("click", function (event) {
+        const modal = document.getElementById("modal-login-admin");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      // Redirigir a literatura.html al hacer login de admin
+      document
+        .getElementById("admin-login-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          window.location.href = "literatura.php"; // Cambia a la ruta correcta de tu página de administración
+        });
+    </script>
+  </body>
 </html>
