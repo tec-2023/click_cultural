@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Opiniones  Click Cultural</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <header>
+    <h1>Blog de Opiniones Click Cultural</h1>
+    <p>Comparte tus pensamientos sobre el futuro y el medio ambiente.</p>
+    <header>
+    <div class="container">
+      <h1>CLICK CULTURAL</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+  <a href="galerias.html">Galerías</a>
+  <a href="literatura.html">Literatura</a>
+  <a href="compromiso.html">Compromiso</a>
+  <a href="colaboradores.html">Colaboradores</a>
+  <a href="blog-project/blog.html">Blog</a>
+  <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  </header>
+  <main>
+    <section class="opiniones">
+      <h2>Opiniones Recientes</h2>
+      <div class="opinion">
+        <p><strong>Usuario 1:</strong> Creo que la tecnología puede ayudarnos a vivir de manera más sostenible.</p>
+      </div>
+      <div class="opinion">
+        <p><strong>Usuario 2:</strong> Es esencial que todos hagamos nuestra parte para proteger el planeta.</p>
+      </div>
+      <!-- Más opiniones se pueden agregar aquí -->
+    </section>
+    <section class="nuevo-opinion">
+      <h2>Exprésate</h2>
+      <!-- Agrega el input de archivo en tu formulario -->
+<form id="opinion-form" enctype="multipart/form-data">
+  <label for="nombre">Tu Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required />
+
+  <label for="opinion">Tu Opinión:</label>
+  <textarea id="opinion" name="opinion" rows="4" required></textarea>
+
+  <label for="imagen">Adjunta una imagen:</label>
+  <input type="file" id="imagen" name="imagen" accept="image/*" />
+
+  <button type="submit">Enviar Opinión</button>
+</form>
+    </section>
+  </main>
+ <script>
+function mostrarOpiniones() {
+  fetch('/api/opiniones')
+    .then(res => res.json())
+    .then(opiniones => {
+      const opinionesDiv = document.querySelector('.opiniones');
+      opinionesDiv.innerHTML = '<h2>Opiniones Recientes</h2>';
+      opiniones.forEach(op => {
+        const nuevaOpinion = document.createElement('div');
+        nuevaOpinion.className = 'opinion';
+        let imgHtml = op.imagen ? `<img src="${op.imagen}" style="max-width:150px;display:block;margin-top:10px;">` : '';
+        nuevaOpinion.innerHTML = `<p><strong>${op.nombre}:</strong> ${op.opinion}</p>${imgHtml}`;
+        opinionesDiv.appendChild(nuevaOpinion);
+      });
+    });
+}
+
+mostrarOpiniones();
+
+document.getElementById('opinion-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  fetch('/api/opiniones', {
+    method: 'POST',
+    body: formData
+  })
+  .then(res => res.json())
+  .then(() => {
+    mostrarOpiniones();
+    this.reset();
+    window.scrollTo({ top: document.querySelector('.opiniones').offsetTop, behavior: 'smooth' });
+  });
+});
+</script>
+  <footer>
+    <p>&copy; 2025 Blog Click Cultural | Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

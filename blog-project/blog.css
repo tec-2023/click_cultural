@@ -1,0 +1,161 @@
+/* Tipografía futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0f2027 0%, #2c7744 100%);
+  color: #e0ffe6;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(20, 40, 30, 0.95);
+  border-bottom: 2px solid #39ff14;
+  box-shadow: 0 4px 20px #39ff1460;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #39ff14;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+header p {
+  color: #baffc9;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #baffc9;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #39ff14;
+  border-bottom: 2px solid #39ff14;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: rgba(20, 40, 30, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #39ff1430;
+  padding: 2rem;
+}
+
+h2 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #39ff14;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.opiniones .opinion {
+  background: rgba(44, 119, 68, 0.2);
+  border-left: 4px solid #39ff14;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #39ff1420;
+}
+
+.opiniones img {
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px #39ff1430;
+}
+
+.nuevo-opinion {
+  margin-top: 2.5rem;
+  background: rgba(44, 119, 68, 0.15);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #39ff1420;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  color: #baffc9;
+  font-weight: bold;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #183d2b;
+  color: #e0ffe6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+input[type="text"]:focus, textarea:focus {
+  box-shadow: 0 0 0 2px #39ff14;
+}
+
+input[type="file"] {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #baffc9;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #39ff14 60%, #2c7744 100%);
+  color: #183d2b;
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #39ff1430;
+  transition: background 0.2s, color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #183d2b;
+  color: #39ff14;
+  border: 2px solid #39ff14;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: rgba(20, 40, 30, 0.95);
+  color: #baffc9;
+  border-top: 2px solid #39ff14;
+  margin-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  main {
+    padding: 1rem;
+  }
+  header, footer {
+    padding: 1rem 0;
+  }
+}
