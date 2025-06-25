@@ -14,7 +14,7 @@ header {
   color: #fff;
   padding: 40px 20px;
   box-shadow: 0 80px 350px #00ffb0a0;
-  border-bottom: px solid #00ffb0;
+  border-bottom: 2px solid #00ffb0; /* Corregido el valor faltante */
 }
 
 header h1 {
@@ -117,132 +117,26 @@ footer {
   position: relative;
 }
 
-footer .admin-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: 20px;
-  color: #00ffb0;
-  font-size: 1em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  vertical-align: middle;
-}
-
-.form-contacto {
-  background: rgba(20, 40, 30, 0.97);
-  border-radius: 14px;
-  box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc4080;
-  padding: 2.5rem 2rem 2rem 2rem;
-  border: 2px solid #00ffb0;
-  max-width: 600px;
-  margin: 36px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  align-items: stretch;
-  color: #e0f7fa;
-  font-family: 'Roboto', Arial, sans-serif;
-}
-
-.form-contacto label {
-  color: #00ffb0;
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-weight: 600;
-  margin-bottom: 4px;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px #00ffb080;
-}
-
-.form-contacto input[type="file"] {
-  background: rgba(20, 30, 40, 0.92);
-  border: 1.5px solid #00ffb0;
-  color: #e0f7fa;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 1em;
-  outline: none;
-  font-family: 'Roboto', Arial, sans-serif;
-  box-shadow: 0 0 8px #00ffb720;
-}
-
-.form-contacto button {
-  background: linear-gradient(90deg, #00ffb0 0%, #2ecc40 100%);
-  color: #222;
-  border: none;
-  padding: 14px 0;
-  border-radius: 10px;
-  font-size: 1.15em;
-  font-family: 'Orbitron', Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
-  cursor: pointer;
-  margin-top: 10px;
-  box-shadow: 0 0 18px #00ffb080;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.form-contacto button:hover {
-  background: linear-gradient(90deg, #2ecc40 0%, #00ffb0 100%);
-  color: #fff;
-  box-shadow: 0 0 32px #00ffb080;
-}
-
-
-/* Responsive menú hamburguesa */
-@media (max-width: 700px) {
-  #menu-toggle {
-    display: block;
-  }
-  nav {
-    display: none;
-    flex-direction: column;
-    background: rgba(10, 30, 20, 0.98);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    border-bottom: 2px solid #00ffb0;
-    box-shadow: 0 8px 32px #00ffb080;
-  }
-  nav.nav-closed {
-    display: none;
-  }
-  nav:not(.nav-closed) {
-    display: flex;
-  }
-  nav a {
-    margin: 18px 0;
-    font-size: 1.2em;
-  }
-  .container {
-    padding: 24px 8px;
-  }
-}
+footer .admin-btn,
 .admin-btn {
   background: none;
   border: none;
-  color: #00ffb0; /* Cambia el color del texto a verde neón */
+  color: #00ffb0;
   font: inherit;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
   margin-left: 1rem;
   font-weight: 500;
+  font-size: 1em;
+  vertical-align: middle;
 }
+
 .admin-btn svg {
   vertical-align: middle;
-  /* Asegura que el SVG herede el color si usas currentColor */
-  /* fill: none; */
 }
+
 .modal {
   position: fixed;
   z-index: 1000;
@@ -349,11 +243,11 @@ footer .admin-btn {
 
 .carousel img {
   width: auto;
-  height: 250px;         /* <-- Se ajusta automáticamente a la imagen */
-  object-fit: contain;  /* <-- No recorta la imagen, la muestra completa */
+  height: 250px;
+  object-fit: contain;
   display: block;
   margin: 0;
-  background: #11111100;     /* Opcional: fondo oscuro si la imagen no es tan ancha */
+  background: #11111100;
 }
 
 @media (max-width: 700px) {
@@ -370,8 +264,8 @@ footer .admin-btn {
   box-shadow: 0 0 32px #00ffb080, 0 0 8px #2ecc4080;
   padding: 2.5rem 2rem 2rem 2rem;
   border: 2px solid #00ffb0;
-  max-width: 400px;
-  margin: 36px auto 0 auto;
+  max-width: 600px;
+  margin: 36px auto;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -406,6 +300,18 @@ footer .admin-btn {
   box-shadow: 0 0 8px #00ffb720;
   outline: none;
   letter-spacing: 1px;
+}
+
+.form-contacto input[type="file"] {
+  background: rgba(20, 30, 40, 0.92);
+  border: 1.5px solid #00ffb0;
+  color: #e0f7fa;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1em;
+  outline: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-shadow: 0 0 8px #00ffb720;
 }
 
 .form-contacto input:focus,
@@ -463,4 +369,36 @@ footer .admin-btn {
 
 .form-contacto button:hover::after {
   left: 100%;
+}
+
+/* Responsive menú hamburguesa */
+@media (max-width: 700px) {
+  #menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(10, 30, 20, 0.98);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 2px solid #00ffb0;
+    box-shadow: 0 8px 32px #00ffb080;
+  }
+  nav.nav-closed {
+    display: none;
+  }
+  nav:not(.nav-closed) {
+    display: flex;
+  }
+  nav a {
+    margin: 18px 0;
+    font-size: 1.2em;
+  }
+  .container {
+    padding: 24px 8px;
+  }
 }
